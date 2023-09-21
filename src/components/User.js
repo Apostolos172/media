@@ -1,4 +1,5 @@
-import { BsXSquareFill, BsXSquar, BsXLg } from "react-icons/bs";
+import { BsXSquareFill, BsXLg } from "react-icons/bs";
+import { GoSync } from "react-icons/go";
 import {
   BsCaretDown,
   BsCaretLeftFill,
@@ -8,11 +9,16 @@ import {
 import FlexContainer from "./FlexContainer";
 import { useState } from "react";
 import AlbumsList from "./AlbumsList";
+import { useThunk } from "../hooks/use-thunk";
+import { deleteUser } from "../store";
 
 const User = ({ children }) => {
+  const [isDeletingUser, errorDeleteUser, updateDeleteUser] =
+    useThunk(deleteUser);
   const [isOpen, setIsOpen] = useState(false);
   const handleDelete = (e) => {
     // delete user
+    updateDeleteUser(children);
   };
   const handleAccordionClick = (e) => {
     // open or close content
@@ -25,11 +31,16 @@ const User = ({ children }) => {
     <>
       <FlexContainer className="bg-slate-300 border-black border-solid py-4 px-4 mb-2 border-t-0 shadow-lg justify-between">
         <FlexContainer>
-          <BsXSquareFill
-            onClick={handleDelete}
-            className="mr-4 cursor-pointer"
-          ></BsXSquareFill>
-          User {children}
+          {isDeletingUser ? (
+            <GoSync className="animate-spin mr-4" />
+          ) : (
+            <BsXLg
+              onClick={handleDelete}
+              className="mr-4 cursor-pointer"
+            ></BsXLg>
+          )}
+          User {children.name}
+          {errorDeleteUser && "Error deleting the user"}
         </FlexContainer>
         {isOpen ? (
           <BsCaretDown
@@ -43,7 +54,7 @@ const User = ({ children }) => {
           ></BsCaretLeft>
         )}
       </FlexContainer>
-      {isOpen && <AlbumsList>Albums Of {children}</AlbumsList>}
+      {isOpen && <AlbumsList>Albums Of {children.name}</AlbumsList>}
     </>
   );
 };

@@ -5,16 +5,21 @@ const useThunk = (thunk) => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
   const dispatch = useDispatch();
-  const update = useCallback(() => {
-    setIsLoading(true);
-    dispatch(thunk())
-      .unwrap()
-      .then()
-      .catch((err) => {
-        setError(err);
-      })
-      .finally(setIsLoading(false));
-  }, [dispatch, thunk]);
+  const update = useCallback(
+    (payload) => {
+      setIsLoading(true);
+      dispatch(thunk(payload))
+        .unwrap()
+        .then()
+        .catch((err) => {
+          setError(err);
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    },
+    [dispatch, thunk]
+  );
 
   return [isLoading, error, update];
 };
