@@ -1,0 +1,147 @@
+{
+  "users": [
+    {
+      "name": "Tolis",
+      "id": 2
+    },
+    {
+      "name": "Miss Leticia Langosh",
+      "id": 3
+    },
+    {
+      "name": "Dustin Sporer",
+      "id": 4
+    },
+    {
+      "name": "Doris Rohan",
+      "id": 10
+    },
+    {
+      "name": "Jermaine Mraz-Beahan",
+      "id": 12
+    },
+    {
+      "name": "Frederick Johnson",
+      "id": 13
+    }
+  ],
+  "albums": [
+    {
+      "name": "Landscapes",
+      "id": 1,
+      "usrId": 2
+    },
+    {
+      "usrId": 10,
+      "name": "Refined Frozen Table",
+      "id": 7
+    },
+    {
+      "usrId": 13,
+      "name": "Luxurious Metal Ball",
+      "id": 9
+    },
+    {
+      "usrId": 2,
+      "name": "Ergonomic Bronze Fish",
+      "id": 11
+    },
+    {
+      "usrId": 12,
+      "name": "Fantastic Steel Ball",
+      "id": 12
+    }
+  ],
+  "photos": [
+    {
+      "albumId": 1,
+      "url": "https://uomdai19172.files.wordpress.com/2019/11/sunset1.jpg?w=1024",
+      "id": 1
+    },
+    {
+      "albumId": 11,
+      "url": "https://picsum.photos/seed/gMdG9Tq/208/144",
+      "id": 5
+    },
+    {
+      "albumId": 11,
+      "url": "https://picsum.photos/seed/UxMoh/208/144",
+      "id": 9
+    },
+    {
+      "albumId": 11,
+      "url": "https://picsum.photos/seed/rDohjnQ/208/144",
+      "id": 12
+    },
+    {
+      "albumId": 11,
+      "url": "https://picsum.photos/seed/9CaOOih/208/144",
+      "id": 13
+    },
+    {
+      "albumId": 11,
+      "url": "https://picsum.photos/seed/gJx88Yh/208/144",
+      "id": 16
+    },
+    {
+      "albumId": 1,
+      "url": "https://picsum.photos/seed/OqWT8KL/208/144",
+      "id": 21
+    },
+    {
+      "albumId": 1,
+      "url": "https://picsum.photos/seed/pFggZiaCZ/208/144",
+      "id": 22
+    },
+    {
+      "albumId": 7,
+      "url": "https://picsum.photos/seed/hSOTgVW9l/208/144",
+      "id": 23
+    },
+    {
+      "albumId": 7,
+      "url": "https://picsum.photos/seed/mP6zxb4G1c/208/144",
+      "id": 24
+    },
+    {
+      "albumId": 12,
+      "url": "https://picsum.photos/seed/YJnfGLQ/208/144",
+      "id": 25
+    },
+    {
+      "albumId": 9,
+      "url": "https://picsum.photos/seed/RCLiHYJHP/208/144",
+      "id": 26
+    },
+    {
+      "albumId": 9,
+      "url": "https://picsum.photos/seed/vwtOInWdj/208/144",
+      "id": 27
+    },
+    {
+      "albumId": 9,
+      "url": "https://picsum.photos/seed/aPVknSd9S9/208/144",
+      "id": 28
+    },
+    {
+      "albumId": 12,
+      "url": "https://picsum.photos/seed/H7rYU/208/144",
+      "id": 32
+    },
+    {
+      "albumId": 1,
+      "url": "https://picsum.photos/seed/IMtj5yj/208/144",
+      "id": 33
+    },
+    {
+      "albumId": 1,
+      "url": "https://picsum.photos/seed/zRpPV/208/144",
+      "id": 34
+    },
+    {
+      "albumId": 1,
+      "url": "https://picsum.photos/seed/SUO1l/208/144",
+      "id": 35
+    }
+  ]
+}
